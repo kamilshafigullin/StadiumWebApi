@@ -1,8 +1,17 @@
 version: '3.4'
-
 services:
+  postgres:
+    container_name: postgres_container
+    image: postgres:latest
+    restart: always
+    environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+        POSTGRES_DB: stadiumdb
+    ports:
+      - '8000:5432'
   stadiumapi:
-    image: ${DOCKER_REGISTRY-}stadiumapi
+    image: '${DOCKER_REGISTRY-}stadiumapi'
     build:
       context: .
       dockerfile: StadiumApi/Dockerfile
