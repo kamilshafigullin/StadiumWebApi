@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  stadiumapi:
+    image: ${DOCKER_REGISTRY-}stadiumapi
+    build:
+      context: .
+      dockerfile: StadiumApi/Dockerfile
