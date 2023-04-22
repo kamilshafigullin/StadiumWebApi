@@ -27,7 +27,7 @@ namespace StadiumApi.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseNpgsql("Host=192.168.0.115;Port=8000;Database=stadiumdb;" +
+            optionsBuilder.UseNpgsql("Host=172.20.10.2;Port=8000;Database=stadiumdb;" +
                 "Username=postgres;Password=postgres;");
         }
 
