@@ -68,5 +68,11 @@ namespace StadiumApi.Controllers
 
             return Ok(result);
         }
+
+        [HttpGet]
+        public async Task<ActionResult<Ticket>> GetTicket()
+        {
+
+        }
     }
 }

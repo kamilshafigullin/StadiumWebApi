@@ -17,6 +17,7 @@ namespace StadiumApi.Data
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
+            Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 

@@ -83,5 +83,10 @@ namespace StadiumApi.Services.VisitorService
 
             return visitors;
         }
+
+        public async Task<Ticket> GetTicket()
+        {
+            return null;
+        }
     }
 }
